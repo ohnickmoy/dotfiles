@@ -1,7 +1,13 @@
-" Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+call plug#begin()
+Plug `ghifarit53/tokyonight-vim`
+call plug#end()
+
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 " Make Vim more useful
 set nocompatible
