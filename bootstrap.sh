@@ -30,12 +30,9 @@ brew install yq
 brew install wget
 brew install tree
 brew install k9s
-<<<<<<< HEAD
-=======
 brew install gh
 brew install fzf
 brew install m1-terraform-provider-helper
->>>>>>> main
 brew install terraform
 
 # Install Ghostty
@@ -50,8 +47,8 @@ mkdir -p "$ghostty_dir"
 ln -sfn "$dotfiles_dir/ghostty/config.ghostty" "$ghostty_dir/config.ghostty"
 
 # Install VS Code
-# echo "Installing Visual Studio Code..."
-# brew install --cask visual-studio-code
+echo "Installing Visual Studio Code..."
+brew install --cask visual-studio-code
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
