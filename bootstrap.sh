@@ -58,17 +58,22 @@ brew install yq
 brew install wget
 brew install tree
 brew install k9s
-brew install m1-terraform-provider-helper
 brew install terraform
-brew install tfswitch
 
-# Install iTerm2
-echo "Installing iTerm2..."
-brew install --cask iterm2
+# Install Ghostty
+echo "Installing Ghostty..."
+brew install --cask ghostty
+
+# Install Ghostty configuration
+echo "Installing Ghostty configuration..."
+dotfiles_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ghostty_dir="$HOME/Library/Application Support/com.mitchellh.ghostty"
+mkdir -p "$ghostty_dir"
+ln -sfn "$dotfiles_dir/ghostty/config.ghostty" "$ghostty_dir/config.ghostty"
 
 # Install VS Code
-echo "Installing Visual Studio Code..."
-brew install --cask visual-studio-code
+# echo "Installing Visual Studio Code..."
+# brew install --cask visual-studio-code
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
