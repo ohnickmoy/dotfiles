@@ -1,5 +1,5 @@
 call plug#begin()
-Plug `ghifarit53/tokyonight-vim`
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 set termguicolors

@@ -1,33 +1,5 @@
 #!/usr/bin/env bash
 
-# cd "$(dirname "${BASH_SOURCE}")";
-
-# git pull origin main;
-
-# function doIt() {
-# 	rsync --exclude ".git/" \
-# 		--exclude ".DS_Store" \
-# 		--exclude ".osx" \
-# 		--exclude "bootstrap.sh" \
-# 		--exclude "README.md" \
-# 		--exclude "LICENSE-MIT.txt" \
-# 		-avh --no-perms . ~;
-# 	source ~/.bash_profile;
-# }
-
-# if [ "$1" == "--force" -o "$1" == "-f" ]; then
-# 	doIt;
-# else
-# 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-# 	echo "";
-# 	if [[ $REPLY =~ ^[Yy]$ ]]; then
-# 		doIt;
-# 	fi;
-# fi;
-# unset doIt;
-
-#!/bin/bash
-
 set -e
 
 # Check for Xcode Command Line Tools and install if not present
@@ -58,6 +30,8 @@ brew install yq
 brew install wget
 brew install tree
 brew install k9s
+brew install gh
+brew install fzf
 brew install m1-terraform-provider-helper
 brew install terraform
 brew install tfswitch
@@ -73,7 +47,8 @@ brew install --cask visual-studio-code
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\else
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
   echo "Oh My Zsh is already installed."
 fi
 
@@ -128,4 +103,3 @@ Setup complete! Please restart your terminal or run:
 If you want to configure Powerlevel10k, run:
   p10k configure
 EOF
-
